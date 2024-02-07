@@ -2,8 +2,8 @@
 Prerequisites:
 
 Ensure you have Python 3.9 (or the appropriate Python version for your project) installed on your local machine.
-Create and activate a virtual environment (optional but recommended for isolating dependencies).
-Install the required dependencies. You can do this by running the following command in your project directory:
+<br>Create and activate a virtual environment (optional but recommended for isolating dependencies).
+<br><br>Install the required dependencies.<br>You can do this by running the following command in your project directory:
 
 `pip install -r requirements.txt`
 
@@ -24,7 +24,7 @@ Prerequisites:
 Ensure you have followed the steps above to set up your project locally, including installing dependencies.
 
 Open a terminal in your project directory.
-Activate your virtual environment (if you're using one).
+Activate your virtual environment (if you're using one).<br>
 Run the tests with the following command:
 
 `python3 -m unittest discover -s tests -p 'test_app.py'`
