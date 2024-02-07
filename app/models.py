@@ -1,12 +1,14 @@
 from marshmallow import Schema, fields, validate
 
 # A list representing a simple in-memory data store for books.
-# Each book is a dictionary with an 'id', 'title', 'author', and 'timestamp'.
+#  Each book is a dictionary with an 'id', 'title', 'author', and 'timestamp'.
 # This is a placeholder for what would typically be persisted in a database.
 books = [
-    {"id": 1, "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "timestamp": "2023-01-01T00:00:00Z"},
-    {"id": 2, "title": "1984", "author": "George Orwell", "timestamp": "2023-01-02T00:00:00Z"},
+    {"id": 1, "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "publication_date": "1925-04-10"},
+    {"id": 2, "title": "1984", "author": "George Orwell", "publication_date": "1949-06-08"},
+    {"id": 3, "title": "To Kill a Mockingbird", "author": "Harper Lee", "publication_date": "1960-07-11"}
 ]
+
 
 
 class BookSchema(Schema):
@@ -26,4 +28,5 @@ class BookSchema(Schema):
     id = fields.Int(dump_only=True)
     title = fields.Str(required=True, validate=validate.Length(min=1))
     author = fields.Str(required=True, validate=validate.Length(min=1))
+    publication_date = fields.Date()
 
